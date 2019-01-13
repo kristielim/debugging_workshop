@@ -104,3 +104,5 @@ void printRectangle(int height, int width) {
 
 ## Step out
 If you are inside a function and would like to continue until you exit that function, use "step out."
+
+## Watchpoints
