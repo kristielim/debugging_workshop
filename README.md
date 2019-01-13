@@ -21,12 +21,33 @@ When our program stops at the breakpoint, the second line has not run yet. So th
 
 ## What can we see once we've stopped at a line?
 * Values of variables
-  * There should be a box at the bottom that tells you the value of variables. You can also hover over variables in your program to get the value. No more print statements whew!
+  * There should be a box at the bottom that tells you the value of variables in the current scope. You can also hover over variables in your program to get the value. No more print statements whew!
+  ![variables xcode](images/variablesxcode.png)
+  ![variables vs](images/variablesvs.png)
 * Stack
-  * You can see what function you're inside of. 
+  * You can see what function(s) you're inside of. 
+  ![stack xcode](images/stackxcode.png)
+  ![stack vs](images/stackvs.png)
+  
+## Continue
+To continue to the next breakpoint, click "continue." Everything in between will be run, but you don't stop at each line. 
+![continue xcode](images/continuexcode.png)
+![continue vs](images/continuevs.png)
+For example, if we are at the first breakpoint in the following code snippet and we click "continue," we will run the code until the second breakpoint where we stop.
+```cpp
+void printRectangle(int height, int width) {
+    for (int i = 0; i < height; i++) {
+        bool fill = false;
+        if (i == 0 || i == height - 1) { // first breakpoint set here
+            fill = true;
+        }
+        printLine(width, fill); // second breakpoint set here
+    }
+}
+```
 
 ##  Step into
-You want to see what happens to the values of different variables as you run each line of the program. To do this, we can click "step into." This looks like:
+To run each line of code one by one, click "step into."
 ![step into xcode](images/stepintoxcode.png)
 ![step into vs](images/stepintocs.png)
 If you come to a line where you call a function, "step into" will take you into that function and start at that function's first line.
@@ -53,4 +74,33 @@ void printRectangle(int height, int width) {
     }
 }
 ```
-With breakpoints and step into, you can already step through your program and see how variables change. The next features are ones you can use to step through your program more quickly. There are also even more features of debuggers but these are the ones we think you might use. 
+With breakpoints, "continue," and "step into," you can already step through your program and see how variables change. The next features are ones you can use to step through your program more quickly. There are also even more features of debuggers but these are the ones we think you might use. 
+
+## Step over
+If you come to a line where you call a function, "step over" will continue until after that function has finished being run. 
+For example, if we are in `printRectangle` and we step over `printLine`, we will continue to the top of the for loop to check the condition `i < height`.
+```cpp
+void printLine(int width, bool fill) {
+    for (int i = 0; i < width; i++) {
+        if (i != 0 && i != width && !fill) {
+            cout << " ";
+        } else {
+            cout << "*";
+        }
+    }
+    cout << endl;
+}
+
+void printRectangle(int height, int width) {
+    for (int i = 0; i < height; i++) { // all of printLine will be run and we will stop here
+        bool fill = false;
+        if (i == 0 || i == height - 1) {
+            fill = true;
+        }
+        printLine(width, fill); // breakpoint set here
+    }
+}
+```
+
+## Step out
+If you are inside a function and would like to continue until you exit that function, use "step out."
