@@ -141,6 +141,8 @@ If you continue or step until `i = 7` (the rightmost index, where the right side
 
 Now that you know what breakpoints and watchpoints are and how to step into, step over, step out, and continue, try it yourself on the buggy code in file lemonadeChange_bug.cpp.
 
+[lemonade stand](images/lemonadeStand.png)
+
 The question is from https://leetcode.com/problems/lemonade-change/ :
  
 At a lemonade stand, each lemonade costs $5. 
