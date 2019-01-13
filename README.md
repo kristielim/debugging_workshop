@@ -105,4 +105,10 @@ void printRectangle(int height, int width) {
 ## Step out
 If you are inside a function and would like to continue until you exit that function, use "step out."
 
+For example, let's say you have stepped into the printLine(width, fill) function while debugging printRectangle. Now, as you are inside printLine, use "step out" if you want to skip the rest of printLine and continue to what happens after the printLine(width, fill) line finishes, back in the function printRectangle.
+
 ## Watchpoints
+Watchpoints are used to track any changes to the value of a variable. Instead of stopping execution when execution hits a particular line or function like a breakpoint does, watchpoints stop execution when the data of interest changes. Watchpoints are especially useful when you have variables that are changed on multiple lines or multiple if statements, or when you think you have a bug that relates to specific variables.
+
+Note: you must set a breakpoint and start debugging the program before setting a watchpoint.
+In XCode, while debugging, right-click the variable of interest listed in the bottom left window and select "watch "<variable-name"".
