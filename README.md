@@ -17,7 +17,7 @@ For example, if we have the following:
 bool fill = false;
 fill = true; // breakpoint set here
 ```
-When our program stops at the breakpoint, the second line has not run yet. So the value of `fill` is still `false` until we continue or step to the next line. 
+When our program stops at the breakpoint, the second line has not run yet. So the value of `fill` is still `false` until we continue or step to the next line. There should be a box at the bottom that tells you the value of variables. You can also hover over variables in your program to get the value. No more print statements whew!
 
 ##  Step into
 You want to see what happens to the values of different variables as you run each line of the program. To do this, we can click "step into." This looks like:
