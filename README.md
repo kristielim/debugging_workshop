@@ -49,7 +49,7 @@ void printRectangle(int height, int width) {
 ##  Step into
 To run each line of code one by one, click "step into."
 ![step into xcode](images/stepintoxcode.png)
-![step into vs](images/stepintocs.png)
+![step into vs](images/stepintovs.png)
 If you come to a line where you call a function, "step into" will take you into that function and start at that function's first line.
 For example, if we are in `printRectangle` and we step into `printLine`, we will stop at the first line of `printLine`.
 ```cpp
