@@ -48,8 +48,10 @@ void printRectangle(int height, int width) {
 
 ##  Step into
 To run each line of code one by one, click "step into."
+
 ![step into xcode](images/stepintoxcode.png)
 ![step into vs](images/stepintovs.png)
+
 If you come to a line where you call a function, "step into" will take you into that function and start at that function's first line.
 For example, if we are in `printRectangle` and we step into `printLine`, we will stop at the first line of `printLine`.
 ```cpp
@@ -135,4 +137,28 @@ Okay, so how to fix the bug in this program? The problem is that the right side 
 
 If you continue or step until `i = 7` (the rightmost index, where the right side of the rectangle should be), you'll see that this breakpoint is still hit. Looking at the if condition and the values of the variables, you see that i = 7 but width = 8. So, by debugging, you see that the error is the if condition should be checking for `i != width - 1` rather than `i != width`.
 
+## Try it yourself!
 
+Now that you know what breakpoints and watchpoints are and how to step into, step over, step out, and continue, try it yourself on the buggy code in file lemonadeChange_bug.cpp.
+
+The question is from https://leetcode.com/problems/lemonade-change/ :
+ 
+At a lemonade stand, each lemonade costs $5. 
+ 
+Each customer will only buy one lemonade and must pay with either a $5, $10, or $20 bill.  You must provide the correct change to each customer (i.e. if customer pays with $10, give back $5. if customer pays with $20, give back $15). You are given an array of integers that represents customers coming in that order and paying with a bill of that value (i.e. {5, 10, 5} means first a customer came and paid with a 5, then a second customer came and paid with a $10, and later a 3rd customer came and paid with a $5.)
+
+Note that you don't have any change in hand at first.
+ 
+Return true if and only if you can provide every customer with correct change.
+ 
+The code in lemonadeChange_bug.cpp is not correct. Use your newly acquired debugging skills to pass all the test cases (the first one works already).
+```
+int twoCustomerTest[2] = { 5, 10 }; // first customer pays with a 5, then second customer pays with 10
+assert( lemonadeChange(twoCustomerTest, 2) ); // you should have change for the second customer with the $5 from the first customer
+    
+int threeCustomerTest[3] = { 5, 10, 20 };
+assert( lemonadeChange(threeCustomerTest, 3) == false ); // you should not have enough change for the 3rd customer
+    
+int fiveCustomerTest[5] = { 5, 10, 5, 20, 5 };
+assert( lemonadeChange(fiveCustomerTest, 5) == false );
+```
