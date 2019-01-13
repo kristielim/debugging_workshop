@@ -111,4 +111,8 @@ For example, let's say you have stepped into the printLine(width, fill) function
 Watchpoints are used to track any changes to the value of a variable. Instead of stopping execution when execution hits a particular line or function like a breakpoint does, watchpoints stop execution when the data of interest changes. Watchpoints are especially useful when you have variables that are changed on multiple lines or multiple if statements, or when you think you have a bug that relates to specific variables.
 
 Note: you must set a breakpoint and start debugging the program before setting a watchpoint.
-In XCode, while debugging, right-click the variable of interest listed in the bottom left window and select "watch "<variable-name"".
+
+In XCode, while debugging, right-click the variable of interest listed in the bottom left window and select watch "<variable-name>".
+
+In Visual Studio, there are two ways to watch a variable: go to Debug tab -> New Breakpoint -> Data Breakpoint and put the address of the variable you are interested in (i.e. &fill). There are additional options like "Conditional expression" which allows you to choose to break when some condition is true (i.e. fill == false) or just when the value changes, and also an option for "Hit Count" which may be useful if you have a number variable and you want it to break when it hits a certain value.
+Or, right-click the variable (in the bottom left window or in the code) and select Add Watch, which sets a default watchpoint that breaks when the value changes.
