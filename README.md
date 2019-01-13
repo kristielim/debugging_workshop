@@ -110,7 +110,7 @@ If you are inside a function and would like to continue until you exit that func
 
 ![step out vs](images/stepoutvs.png)
 
-For example, let's say you have stepped into the printLine(width, fill) function while debugging printRectangle. Now, as you are inside printLine, use "step out" if you want to skip the rest of printLine and continue to what happens after the printLine(width, fill) line finishes, back in the function printRectangle.
+For example, let's say you have stepped into the `printLine(width, fill)` function while debugging printRectangle. Now, as you are inside printLine, use "step out" if you want to skip the rest of printLine and continue to what happens after the `printLine(width, fill)` line finishes, back in the function printRectangle.
 
 ## Watchpoints
 Watchpoints are used to track any changes to the value of a variable. Instead of stopping execution when execution hits a particular line or function like a breakpoint does, watchpoints stop execution when the data of interest changes. Watchpoints are especially useful when you have variables that are changed on multiple lines or multiple if statements, or when you think you have a bug that relates to specific variables.
@@ -125,3 +125,14 @@ In Visual Studio, there are two ways to watch a variable: go to Debug tab -> New
 Or, right-click the variable (in the bottom left window or in the code) and select Add Watch, which sets a default watchpoint that breaks when the value changes.
 
 ![watchpoint vs](images/watchpointvs.png)
+
+## Debugging the sample program
+
+Okay, so how to fix the bug in this program? The problem is that the right side of the rectangle is not printed out. Looking at the code, we can guess that we are printing a " " when we should be printing a "\*". So, we can set a breakpoint at the line `cout << " "` to see why the space is printed out.
+
+![debug breakpoint xcode](images/debugvs.png)
+![debug breakpoint vs](images/debugxcode.png)
+
+If you continue or step until `i = 7` (the rightmost index, where the right side of the rectangle should be), you'll see that this breakpoint is still hit. Looking at the if condition and the values of the variables, you see that i = 7 but width = 8. So, by debugging, you see that the error is the if condition should be checking for `i != width - 1` rather than `i != width`.
+
+
