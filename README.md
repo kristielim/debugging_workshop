@@ -17,7 +17,13 @@ For example, if we have the following:
 bool fill = false;
 fill = true; // breakpoint set here
 ```
-When our program stops at the breakpoint, the second line has not run yet. So the value of `fill` is still `false` until we continue or step to the next line. There should be a box at the bottom that tells you the value of variables. You can also hover over variables in your program to get the value. No more print statements whew!
+When our program stops at the breakpoint, the second line has not run yet. So the value of `fill` is still `false` until we continue or step to the next line. 
+
+## What can we see once we've stopped at a line?
+* Values of variables
+  * There should be a box at the bottom that tells you the value of variables. You can also hover over variables in your program to get the value. No more print statements whew!
+* Stack
+  * You can see what function you're inside of. 
 
 ##  Step into
 You want to see what happens to the values of different variables as you run each line of the program. To do this, we can click "step into." This looks like:
@@ -47,3 +53,4 @@ void printRectangle(int height, int width) {
     }
 }
 ```
+With breakpoints and step into, you can already step through your program and see how variables change. The next features are ones you can use to step through your program more quickly. There are also even more features of debuggers but these are the ones we think you might use. 
