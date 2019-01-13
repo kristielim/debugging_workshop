@@ -77,6 +77,9 @@ void printRectangle(int height, int width) {
 With breakpoints, "continue," and "step into," you can already step through your program and see how variables change. The next features are ones you can use to step through your program more quickly. There are also even more features of debuggers but these are the ones we think you might use. 
 
 ## Step over
+
+![step over vs](images/stepovervs.png)
+
 If you come to a line where you call a function, "step over" will continue until after that function has finished being run. 
 For example, if we are in `printRectangle` and we step over `printLine`, we will continue to the top of the for loop to check the condition `i < height`.
 ```cpp
@@ -105,6 +108,8 @@ void printRectangle(int height, int width) {
 ## Step out
 If you are inside a function and would like to continue until you exit that function, use "step out."
 
+![step out vs](images/stepoutvs.png)
+
 For example, let's say you have stepped into the printLine(width, fill) function while debugging printRectangle. Now, as you are inside printLine, use "step out" if you want to skip the rest of printLine and continue to what happens after the printLine(width, fill) line finishes, back in the function printRectangle.
 
 ## Watchpoints
@@ -114,5 +119,9 @@ Note: you must set a breakpoint and start debugging the program before setting a
 
 In XCode, while debugging, right-click the variable of interest listed in the bottom left window and select watch "<variable-name>".
 
+![watchpoint xcode](images/watchpointxcode.png)
+
 In Visual Studio, there are two ways to watch a variable: go to Debug tab -> New Breakpoint -> Data Breakpoint and put the address of the variable you are interested in (i.e. &fill). By default this will be a regular watchpoint that breaks execution when value changes, but if you're interested, there are additional options like "Conditional expression" which allows you to choose to break when some condition is true (i.e. fill == false) or just when the value changes, and also an option for "Hit Count" which may be useful if you have a number variable and you want it to break when it hits a certain value.
 Or, right-click the variable (in the bottom left window or in the code) and select Add Watch, which sets a default watchpoint that breaks when the value changes.
+
+![watchpoint vs](images/watchpointvs.png)
