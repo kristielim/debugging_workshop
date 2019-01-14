@@ -166,3 +166,13 @@ assert( lemonadeChange(threeCustomerTest, 3) == false ); // you should not have 
 int fiveCustomerTest[5] = { 5, 10, 5, 20, 5 };
 assert( lemonadeChange(fiveCustomerTest, 5) == false );
 ```
+
+## Another exercise to try
+
+Here's another example you can try.
+
+The goal here is to make a palindrome from a string, with a few rules: remove all spaces, replace newlines with 'N', and replace any digit with '0'. For example, input "h e l l o!" should give "hello!!olleh" and "CS 32\n" should give "CS00NN00SC".
+
+The buggy code is in [makePal_bug.cpp](makePal_bug.cpp).
+
+
