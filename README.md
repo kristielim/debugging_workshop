@@ -1,4 +1,5 @@
 # Debugging Workshop
+Slides: [LA Debugging Workshop Presentation](https://tinyurl.com/ladebug)
 
 ## Why do we need a debugger?
 We could just stare at the code, but this might take a long time (or possibly forever).
@@ -11,6 +12,7 @@ We could also use print statements. But this lacks many of the useful features o
 Stop the program at places where you might think there is a problem. Click next to the line number to set a breakpoint at that line. You can disable the breakpoint by clicking again.
 ![breakpoint xcode](images/breakpointxcode.png)
 ![breakpoint vs](images/breakpointvs.png)
+
 If we run our code with debugging, the program will stop right **before** running the line of code that we set our breakpoint to. 
 For example, if we have the following:
 ```cpp
