@@ -155,7 +155,7 @@ Note that you don't have any change in hand at first.
  
 Return true if and only if you can provide every customer with correct change.
  
-The code in lemonadeChange_bug.cpp is not correct. Use your newly acquired debugging skills to pass all the test cases (the first one works already).
+The code in [lemonadeChange_bug.cpp](lemonadeChange_bug.cpp) is not correct. Use your newly acquired debugging skills to pass all the test cases. If you copy and paste the code to a new project, you'll see that the first test case works. Try to use breakpoints and/or watchpoints to help you fix the test cases. Try to fix them one at a time.
 ```
 int twoCustomerTest[2] = { 5, 10 }; // first customer pays with a 5, then second customer pays with 10
 assert( lemonadeChange(twoCustomerTest, 2) ); // you should have change for the second customer with the $5 from the first customer
