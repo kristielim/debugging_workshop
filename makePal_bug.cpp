@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -33,4 +34,10 @@ string makePalindrome(string s) {
     s += reverseString(s);
     
     return s;
+}
+
+int main() {
+    // Make your own test cases
+    
+    return 0;
 }
