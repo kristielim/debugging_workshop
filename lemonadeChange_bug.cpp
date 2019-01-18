@@ -58,8 +58,8 @@ int main(int argc, const char * argv[]) {
     int threeCustomerTest[3] = { 5, 10, 20 };
     assert( lemonadeChange(threeCustomerTest, 3) == false ); // you should not have enough change for the 3rd customer
     
-    int fiveCustomerTest[5] = { 5, 10, 5, 20, 5 };
-    assert( lemonadeChange(fiveCustomerTest, 5) == false );
+    int fourCustomerTest[4] = { 5, 10, 20, 5 };
+    assert( lemonadeChange(fourCustomerTest, 4) == false );
     
     std::cout << "Woohoo, passed all tests" << std::endl;
     return 0;
