@@ -163,8 +163,8 @@ assert( lemonadeChange(twoCustomerTest, 2) ); // you should have change for the 
 int threeCustomerTest[3] = { 5, 10, 20 };
 assert( lemonadeChange(threeCustomerTest, 3) == false ); // you should not have enough change for the 3rd customer
     
-int fiveCustomerTest[5] = { 5, 10, 5, 20, 5 };
-assert( lemonadeChange(fiveCustomerTest, 5) == false );
+int fourCustomerTest[4] = { 5, 10, 20, 5 };
+assert( lemonadeChange(fourCustomerTest, 4) == false );
 ```
 
 ## Another exercise to try
@@ -174,6 +174,10 @@ Here's another example you can try.
 The goal here is to make a palindrome from a string, with a few rules: remove all spaces, replace newlines with 'N', and replace any digit with '0'. For example, input "h e l l o!" should give "hello!!olleh" and "CS 32\n" should give "CS00NN00SC".
 
 The buggy code is in [makePal_bug.cpp](makePal_bug.cpp).
+
+Once you find the bug(s), you are allowed to fix the code any way you like. The point of the exercise is to practice using the debugger, so don't worry too much about these problems specifically.
+
+Solution is here [makePal_SOLUTION.cpp](makePal_SOLUTION.cpp).
 
 ## Summary
 
