@@ -177,6 +177,8 @@ The buggy code is in [makePal_bug.cpp](makePal_bug.cpp).
 
 Once you find the bug(s), you are allowed to fix the code any way you like. The point of the exercise is to practice using the debugger, so don't worry too much about these problems specifically.
 
+If you don't know what a function does, you can more efficiently check if it is causing your bug by using 'step over' to skip over the details and see if it changes the variables that you care about.
+
 Solution is here [makePal_SOLUTION.cpp](makePal_SOLUTION.cpp).
 
 ## Summary
@@ -185,11 +187,11 @@ Takeaway: Use the debugger!
 
 XCode and Visual Studio make debugging pretty easy, and this is a more efficient and cleaner way of debugging your programs. Our examples are simple, but these debugging skills can be used for much larger and more complicated programs, and most debuggers, including one you'll encounter in CS 33 and 35L (not just XCode and Visual Studio's debuggers), have the concepts of stepping, breakpoints, and watchpoints.
 
-TL:DR for when to use each:
+TL:DR for when to use each (come back here for quick reference):
 
 * Breakpoints: inspect a line or stop at a function of interest
 * Watchpoints: keep track of how the value of a variable changes, useful when you know this variable has a wrong value or when you have a variable that changes often or can be changed on multiple lines. Note: can only set a watchpoint while debugging.
 * Step into: inspect the implementation of a function
-* Step over: you already know this function works, or you want a preliminary check of whether a function has correct behavior without looking into the details. also step over library functions.
+* Step over: you already know this function works, or you want a preliminary check of whether a function has correct behavior without looking into the details. check the value of variables after you 'step over' to validate that this function works as expected.
 * Step out: finish this function and get me to the line after this function executes.
 
