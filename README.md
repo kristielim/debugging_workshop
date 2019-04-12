@@ -31,6 +31,15 @@ When our program stops at the breakpoint, the second line has not run yet. So th
   ![stack xcode](images/stackxcode.png)
   ![stack vs](images/stackvs.png)
   
+ 
+**NOTE** if you are using XCode and the breakpoint does not stop at a your function as expected and instead shows something ugly like this: 
+
+ 0x100000f6e <+14>:  movl   $0x0, -0xc(%rbp)
+ 0x100000f75 <+21>:  movl   -0xc(%rbp), %eax
+ 
+ then it may just be a problem in your XCode settings. Go to the Debug tab -> Debug Workflow -> and make sure 'Always Show Disassembly' does not have a check.
+
+  
 ## Continue
 To continue to the next breakpoint, click "continue." Everything in between will be run, but you don't stop at each line. 
 ![continue xcode](images/continuexcode.png)
